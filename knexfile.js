@@ -2,9 +2,12 @@ module.exports = {
   development: {
     client: "pg",
     connection: {
-      filename: "postgres://localhost/forecasts",
-      useNullAsDefault: true
-    }
+      filename: "postgres://localhost/forecasts"
+    },
+    migrations: {
+      directory: "./db/migrations"
+    },
+    useNullAsDefault: true
   },
 
   production: {
