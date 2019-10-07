@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 3001);
 app.use(express.json());
+const cors = require("cors");
+app.use(cors());
 
 app.locals.title = "Weather Report";
 app.locals.forecasts = [
